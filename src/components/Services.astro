@@ -1,0 +1,68 @@
+---
+const advanced = [
+  'Capacitación espacios seguros',
+  'Distintivo espacios seguros',
+  'Certificado DC-3 trabajos en altura',
+  'Protocolos de desinfección',
+  'Jardinería',
+];
+const special = [
+  'Limpieza profunda de sanitarios',
+  'Limpieza de obra negra y fina',
+  'Lavado y pulido de pisos',
+  'Desinfección por evento',
+  'Limpieza de fosas y cisternas',
+  'Limpieza de espacios confinados',
+  'Limpieza de ductos y tubería en piso y altura',
+  'Lavado de estacionamientos',
+  'Lavado de alfombras y tapicería',
+  'Limpieza de tanques elevados',
+  'Limpieza de domos y cristales en altura',
+  'Limpieza de transportadores',
+  'Sanitización por aspersión y nebulización',
+  'Limpieza profunda de espacios',
+  'Fumigación',
+];
+---
+<section class="section" id="servicios">
+  <div class="container">
+    <div class="heading">
+      <p class="eyebrow">Nuestros servicios</p>
+      <h2 class="section-title">Soluciones avanzadas y servicios especiales</h2>
+      <p class="section-lead">Cubrimos desde la operación rutinaria hasta intervenciones técnicas especializadas, con protocolos y personal preparado.</p>
+    </div>
+    <div class="grid service-grid">
+      <article class="card">
+        <div class="card-head">
+          <span class="tag">Servicios avanzados</span>
+          <h3>Capacitación, seguridad y cumplimiento</h3>
+        </div>
+        <ul class="clean">
+          {advanced.map((s) => <li>{s}</li>)}
+        </ul>
+        <p class="reg">Estamos regulados y enfocados en operación segura.</p>
+      </article>
+      <article class="card">
+        <div class="card-head">
+          <span class="tag">Servicios especiales*</span>
+          <h3>Intervenciones profundas y técnicas</h3>
+        </div>
+        <ul class="clean special-list">
+          {special.map((s) => <li>{s}</li>)}
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+<style>
+  .heading { margin-bottom: 2.75rem; }
+  .service-grid { grid-template-columns: .9fr 1.1fr; }
+  .card-head { margin-bottom: 1.5rem; }
+  .card-head .tag { margin-bottom: .75rem; }
+  .card h3 { font-size: 1.55rem; line-height: 1.25; }
+  .reg { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--primary); font-weight: 600; font-size: .95rem; }
+  .special-list { columns: 2; column-gap: 2rem; }
+  .special-list li { break-inside: avoid; }
+  @media (max-width: 960px) { .service-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 640px) { .special-list { columns: 1; } }
+</style>

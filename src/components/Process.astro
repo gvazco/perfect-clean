@@ -1,0 +1,46 @@
+---
+const steps = [
+  { title: 'Conocerte', text: 'Nos tomamos el tiempo para saber más de ti.', items: ['Levantamiento en sitio', 'Detección de necesidades'] },
+  { title: 'Fabricamos la fórmula', text: 'Diseñamos un plan 100% enfocado en tus espacios.', items: ['Alcances operativos', 'Propuestas económicas'] },
+  { title: 'Últimos detalles', text: 'Nos aseguramos de darte lo que esperas.', items: ['Presentación', 'Feedback'] },
+  { title: 'Eficiencias que brillan', text: 'Instalación y acompañamiento para productividad al máximo.', items: ['Acompañamiento ejecutivo', 'Seguimiento personalizado'] },
+];
+---
+<section class="section" id="proceso">
+  <div class="container">
+    <div class="heading">
+      <p class="eyebrow">¿Cómo lo hacemos?</p>
+      <h2 class="section-title">Un proceso claro, de principio a fin</h2>
+      <p class="section-lead">Te acompañamos desde el levantamiento inicial hasta el seguimiento operativo, con comunicación y control en cada etapa.</p>
+    </div>
+    <div class="grid process-grid">
+      {steps.map((s, i) => (
+        <article class="step card">
+          <div class="step-top">
+            <span class="step-num">{i + 1}</span>
+            <h3>{s.title}</h3>
+          </div>
+          <p>{s.text}</p>
+          <ul class="clean">
+            {s.items.map((it) => <li>{it}</li>)}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+<style>
+  .heading { text-align: center; margin-bottom: 2.75rem; }
+  .heading .section-lead { margin-inline: auto; }
+  .process-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+  .step { position: relative; }
+  .step-top { display: flex; align-items: center; gap: .75rem; margin-bottom: .75rem; }
+  .step-num {
+    width: 2.2rem; height: 2.2rem; border-radius: 50%; display: grid; place-items: center;
+    background: var(--primary); color: #fff; font-weight: 800; font-size: .9rem; flex-shrink: 0;
+  }
+  .step h3 { font-size: 1.15rem; line-height: 1.3; }
+  .step p { color: var(--muted); font-size: .95rem; margin-bottom: 1rem; min-height: 3rem; }
+  @media (max-width: 1020px) { .process-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+  @media (max-width: 560px) { .process-grid { grid-template-columns: 1fr; } .step p { min-height: 0; } }
+</style>

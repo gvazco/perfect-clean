@@ -1,0 +1,21 @@
+---
+const year = new Date().getFullYear();
+---
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="brand">Perfect<span>Clean</span></p>
+      <p class="copy">Limpieza y mantenimiento industrial. No somos los únicos, pero sí los mejores.</p>
+    </div>
+    <p class="legal">© {year} Perfect Clean. Todos los derechos reservados.</p>
+  </div>
+</footer>
+<style>
+  .footer { background: #092636; color: rgba(255,255,255,.72); padding: 2rem 0; font-size: .92rem; }
+  .footer-inner { display: flex; justify-content: space-between; gap: 1.5rem; align-items: end; }
+  .brand { font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: .25rem; }
+  .brand span { color: #8fe3f3; }
+  .copy { max-width: 420px; }
+  .legal { text-align: right; }
+  @media (max-width: 700px) { .footer-inner { flex-direction: column; align-items: flex-start; } .legal { text-align: left; } }
+</style>

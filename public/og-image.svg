@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#073a54"/>
+      <stop offset="55%" stop-color="#0b5f87"/>
+      <stop offset="100%" stop-color="#147aa8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="980" cy="120" r="180" fill="rgba(37,176,201,.28)"/>
+  <circle cx="220" cy="540" r="160" fill="rgba(255,255,255,.06)"/>
+  <g fill="#fff" font-family="Arial, Helvetica, sans-serif">
+    <text x="90" y="170" font-size="34" letter-spacing="6" fill="#8fe3f3">LIMPIEZA Y MANTENIMIENTO INDUSTRIAL</text>
+    <text x="90" y="290" font-size="88" font-weight="700">Perfect Clean</text>
+    <text x="90" y="360" font-size="46" fill="#dff7fb">No somos los únicos, pero sí los mejores.</text>
+    <text x="90" y="450" font-size="30" fill="rgba(255,255,255,.88)">Servicio especializado • Personal capacitado • Cumplimiento normativo</text>
+    <text x="90" y="500" font-size="28" fill="rgba(255,255,255,.78)">Puebla · CDMX · Querétaro · Tlaxcala · Pachuca</text>
+  </g>
+</svg>

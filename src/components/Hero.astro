@@ -1,0 +1,79 @@
+---
+---
+<section class="hero" id="inicio">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Limpieza y mantenimiento industrial</p>
+      <h1>No somos los únicos,<br /><span>pero sí los mejores.</span></h1>
+      <p class="lead">
+        Entendemos tus necesidades, nos adaptamos a tu presupuesto y gestionamos tu servicio de limpieza
+        con personal capacitado, procesos claros y cumplimiento normativo.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#contacto">Solicitar cotización</a>
+        <a class="btn btn-outline" href="#servicios">Conocer servicios</a>
+      </div>
+      <div class="trust">
+        <div><strong>100%</strong><span>Personal capacitado</span></div>
+        <div><strong>REPSE</strong><span>Proveedor especializado</span></div>
+        <div><strong>5+</strong><span>Ciudades con cobertura</span></div>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <div class="panel-card">
+        <p class="panel-title">Servicio especializado para sectores</p>
+        <ul class="clean">
+          <li>Industria y manufactura</li>
+          <li>Corporativos y oficinas</li>
+          <li>Comercios y espacios operativos</li>
+          <li>Obra, altura y espacios confinados</li>
+        </ul>
+        <div class="panel-note">
+          <span class="tag">Déjalo en nuestras manos</span>
+          <p>Planes con y sin materiales, maquinaria y servicios especiales.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .hero {
+    position: relative; color: #fff; padding: 6.5rem 0 5rem; overflow: hidden;
+    background: linear-gradient(135deg, #073a54 0%, #0b5f87 55%, #147aa8 100%);
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 80% 20%, rgba(37,176,201,.35), transparent 28%),
+      radial-gradient(circle at 20% 80%, rgba(255,255,255,.08), transparent 24%),
+      linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+    background-size: auto, auto, 32px 32px, 32px 32px;
+  }
+  .hero-grid { position: relative; display: grid; grid-template-columns: 1.2fr .9fr; gap: 3rem; align-items: center; }
+  .eyebrow { color: #a8dff0; }
+  h1 { font-size: clamp(2.7rem, 6vw, 4.8rem); line-height: 1.05; margin-bottom: 1.25rem; letter-spacing: -.02em; }
+  h1 span { color: #8fe3f3; }
+  .lead { font-size: 1.12rem; color: rgba(255,255,255,.88); max-width: 640px; margin-bottom: 2rem; }
+  .actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.25rem; }
+  .trust { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; }
+  .trust div { padding-top: 1rem; border-top: 1px solid rgba(255,255,255,.18); }
+  .trust strong { display: block; font-size: 1.35rem; }
+  .trust span { font-size: .88rem; color: rgba(255,255,255,.76); }
+  .panel-card {
+    background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18);
+    backdrop-filter: blur(8px); border-radius: 24px; padding: 2rem; box-shadow: 0 20px 60px rgba(0,0,0,.12);
+  }
+  .panel-title { font-size: 1.35rem; font-weight: 700; margin-bottom: 1.25rem; }
+  .panel-card .clean li { color: rgba(255,255,255,.88); }
+  .panel-card .clean li::before { background: #8fe3f3; }
+  .panel-note { margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,.16); }
+  .panel-note .tag { background: rgba(255,255,255,.16); color: #fff; margin-bottom: .75rem; }
+  .panel-note p { color: rgba(255,255,255,.8); font-size: .95rem; }
+  @media (max-width: 900px) {
+    .hero { padding: 5rem 0 3.5rem; }
+    .hero-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) { .trust { grid-template-columns: 1fr; } }
+</style>

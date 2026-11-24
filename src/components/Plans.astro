@@ -1,0 +1,66 @@
+---
+const plans = [
+  {
+    name: 'Plan Esencial',
+    desc: 'Rutina de limpieza confiable para operación diaria.',
+    features: ['Personal 100% capacitado', 'Materiales (con y sin materiales)', 'Maquinaria', 'Servicios especiales'],
+  },
+  {
+    name: 'Plan Operativo',
+    desc: 'Cobertura integral para instalaciones con mayor exigencia.',
+    features: ['Personal 100% capacitado', 'Materiales', 'Maquinaria', 'Servicios especiales'],
+    featured: true,
+  },
+  {
+    name: 'Plan Integral',
+    desc: 'Gestión completa con alcance ampliado y servicios complementarios.',
+    features: ['Personal 100% capacitado', 'Materiales (con y sin materiales)', 'Maquinaria', 'Servicios especiales'],
+  },
+];
+---
+<section class="section section-alt" id="planes">
+  <div class="container">
+    <div class="heading">
+      <p class="eyebrow">Planes de rutina</p>
+      <h2 class="section-title">Elige el plan que se adapta a tu operación</h2>
+      <p class="section-lead">Podemos agregar encuestas de seguimiento para el usuario o jardinería básica según las necesidades de tu espacio.</p>
+    </div>
+    <div class="grid plans-grid">
+      {plans.map((plan) => (
+        <article class:list={['card', 'plan', { featured: plan.featured }]}>
+          {plan.featured && <span class="tag">Más solicitado</span>}
+          <h3>{plan.name}</h3>
+          <p class="desc">{plan.desc}</p>
+          <ul class="clean">
+            {plan.features.map((f) => <li>{f}</li>)}
+          </ul>
+          <a class="btn btn-primary" href="#contacto">Solicitar información</a>
+        </article>
+      ))}
+    </div>
+    <div class="repse">
+      <strong>Somos proveedor con actividad especializada</strong>
+      <span>Llámamos: <a href="tel:2226060311">(222) 606 0311</a></span>
+    </div>
+  </div>
+</section>
+<style>
+  .heading { text-align: center; margin-bottom: 2.75rem; }
+  .heading .section-lead { margin-inline: auto; }
+  .plans-grid { grid-template-columns: repeat(3, minmax(0,1fr)); align-items: stretch; }
+  .plan { display: flex; flex-direction: column; }
+  .plan .tag { align-self: flex-start; margin-bottom: 1rem; }
+  .plan h3 { font-size: 1.5rem; margin-bottom: .5rem; }
+  .desc { color: var(--muted); margin-bottom: 1.25rem; min-height: 3.2rem; }
+  .plan .clean { margin-bottom: 1.5rem; flex: 1; }
+  .plan .btn { width: 100%; }
+  .plan.featured { border-color: rgba(11,95,135,.35); background: linear-gradient(180deg, #fff, #f2faff); transform: translateY(-4px); }
+  .repse {
+    margin-top: 2rem; background: var(--primary-dark); color: #fff; border-radius: var(--radius);
+    padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; gap: 1rem; align-items: center;
+    font-size: .95rem;
+  }
+  .repse a { color: #8fe3f3; font-weight: 700; }
+  @media (max-width: 960px) { .plans-grid { grid-template-columns: 1fr; } .plan.featured { transform: none; } .desc { min-height: 0; } }
+  @media (max-width: 640px) { .repse { flex-direction: column; text-align: center; } }
+</style>

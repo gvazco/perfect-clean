@@ -1,0 +1,50 @@
+---
+const reasons = [
+  { title: 'Empleos formales', text: 'Eficiencia y cumplimiento fiscal. Garantice la seguridad y cumplimiento normativo con nuestros servicios de limpieza.' },
+  { title: 'Desarrollo de plan de trabajo', text: 'Diseñamos rutinas y alcances operativos alineados a las necesidades reales de tus espacios.' },
+  { title: 'Capacitación operativa y habilidades blandas', text: 'Personal preparado para ejecutar con criterio, seguridad y atención al detalle.' },
+  { title: 'Formalidad', text: 'Proveedor con cumplimientos, precios competitivos y deducibilidad fiscal.' },
+  { title: 'Servicios especializados', text: 'Contamos con la experiencia para resolver necesidades complejas en limpieza y mantenimiento.' },
+];
+---
+<section class="section section-alt" id="por-que">
+  <div class="container">
+    <div class="grid why-grid">
+      <div>
+        <p class="eyebrow">¿Por qué elegirnos?</p>
+        <h2 class="section-title">Confianza, formalidad y resultados visibles</h2>
+        <p class="section-lead">Más que limpieza, ofrecemos una operación confiable: personal con seguridad social, prestaciones de ley y procesos diseñados para tu negocio.</p>
+        <div class="highlight card">
+          <p class="big">Déjalo en nuestras manos</p>
+          <p>Nos ocupamos de la gestión para que tu equipo se enfoque en lo que importa.</p>
+        </div>
+      </div>
+      <div class="grid reasons">
+        {reasons.map((r, i) => (
+          <article class="reason card">
+            <span class="num">0{i + 1}</span>
+            <div>
+              <h3>{r.title}</h3>
+              <p>{r.text}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .why-grid { grid-template-columns: .95fr 1.05fr; gap: 2.5rem; align-items: start; }
+  .highlight { margin-top: 2rem; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #fff; border: none; }
+  .highlight .big { font-size: 1.6rem; font-weight: 800; margin-bottom: .35rem; }
+  .highlight p:last-child { color: rgba(255,255,255,.85); }
+  .reasons { gap: 1rem; }
+  .reason { display: flex; gap: 1rem; padding: 1.25rem 1.4rem; box-shadow: none; }
+  .num {
+    flex: 0 0 2.5rem; height: 2.5rem; border-radius: .75rem; display: grid; place-items: center;
+    background: rgba(11,95,135,.1); color: var(--primary); font-weight: 800; font-size: .9rem;
+  }
+  .reason h3 { font-size: 1.05rem; margin-bottom: .2rem; }
+  .reason p { color: var(--muted); font-size: .95rem; }
+  @media (max-width: 960px) { .why-grid { grid-template-columns: 1fr; } }
+</style>

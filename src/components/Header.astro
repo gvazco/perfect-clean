@@ -1,0 +1,43 @@
+---
+const links = [
+  { href: '#servicios', label: 'Servicios' },
+  { href: '#planes', label: 'Planes' },
+  { href: '#proceso', label: 'Proceso' },
+  { href: '#contacto', label: 'Contacto' },
+];
+---
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#inicio" aria-label="Perfect Clean inicio">
+      <span class="brand-mark">PC</span>
+      <span class="brand-text">Perfect<span>Clean</span></span>
+    </a>
+    <nav aria-label="Principal">
+      <ul>
+        {links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+      </ul>
+    </nav>
+    <a class="btn btn-primary nav-cta" href="#contacto">Cotiza tu servicio</a>
+  </div>
+</header>
+<style>
+  .site-header {
+    position: sticky; top: 0; z-index: 50; backdrop-filter: blur(12px);
+    background: rgba(244,248,251,.88); border-bottom: 1px solid rgba(215,229,238,.7);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .9rem 0; }
+  .brand { display: inline-flex; align-items: center; gap: .65rem; font-weight: 800; font-size: 1.35rem; }
+  .brand-mark {
+    width: 2.4rem; height: 2.4rem; border-radius: .7rem; display: grid; place-items: center;
+    background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; font-size: .95rem;
+  }
+  .brand-text span { color: var(--primary); }
+  nav ul { display: flex; list-style: none; gap: 1.5rem; }
+  nav a { color: var(--muted); font-weight: 600; font-size: .95rem; }
+  nav a:hover { color: var(--primary); }
+  .nav-cta { padding: .7rem 1.15rem; font-size: .9rem; }
+  @media (max-width: 900px) {
+    nav { display: none; }
+    .nav-cta { margin-left: auto; }
+  }
+</style>
