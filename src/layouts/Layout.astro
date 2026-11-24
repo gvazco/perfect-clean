@@ -1,37 +1,44 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 
 interface Props {
   title?: string;
   description?: string;
 }
 const {
-  title = 'Perfect Clean | Limpieza y Mantenimiento Industrial',
-  description = 'Servicio de limpieza especializado para sectores industriales y comerciales en Puebla, CDMX, Querétaro, Tlaxcala y Pachuca. Personal capacitado, planes a la medida y cumplimiento normativo.',
+  title = "Perfect Clean | Limpieza y Mantenimiento Industrial",
+  description = "Servicio de limpieza especializado para sectores industriales y comerciales en Puebla, CDMX, Querétaro, Tlaxcala y Pachuca. Personal capacitado, planes a la medida y cumplimiento normativo.",
 } = Astro.props;
 
-const site = 'https://perfectclean.mx';
+const site = "https://perfect-clean.gbvazco.net";
 const canonical = new URL(Astro.url.pathname, site).toString();
-const ogImage = new URL('/og-image.svg', site).toString();
+const ogImage = new URL("/og-image.svg", site).toString();
 const schema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'Perfect Clean',
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Perfect Clean",
   description,
   url: site,
   image: ogImage,
-  telephone: ['+52-222-606-0311', '+52-222-611-8518'],
-  email: 'perfectclean.puebla@gmail.com',
-  areaServed: ['Puebla', 'Ciudad de México', 'Querétaro', 'Tlaxcala', 'Pachuca'],
-  openingHours: 'Mo-Fr 08:00-17:00',
+  telephone: ["+52-222-606-0311", "+52-222-611-8518"],
+  email: "perfectclean.puebla@gmail.com",
+  areaServed: [
+    "Puebla",
+    "Ciudad de México",
+    "Querétaro",
+    "Tlaxcala",
+    "Pachuca",
+  ],
+  openingHours: "Mo-Fr 08:00-17:00",
   serviceType: [
-    'Limpieza industrial',
-    'Mantenimiento industrial',
-    'Limpieza de obra negra y fina',
-    'Sanitización y fumigación',
+    "Limpieza industrial",
+    "Mantenimiento industrial",
+    "Limpieza de obra negra y fina",
+    "Sanitización y fumigación",
   ],
 };
 ---
+
 <!doctype html>
 <html lang="es-MX">
   <head>
@@ -41,7 +48,10 @@ const schema = {
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <meta name="theme-color" content="#0b5f87" />
     <meta name="author" content="Perfect Clean" />
-    <meta name="keywords" content="limpieza industrial, mantenimiento industrial, limpieza comercial, sanitización, fumigación, Puebla, CDMX, Querétaro, Tlaxcala, Pachuca" />
+    <meta
+      name="keywords"
+      content="limpieza industrial, mantenimiento industrial, limpieza comercial, sanitización, fumigación, Puebla, CDMX, Querétaro, Tlaxcala, Pachuca"
+    />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta property="og:type" content="website" />
@@ -59,7 +69,9 @@ const schema = {
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   </head>
   <body>
-    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <a class="skip-link" href="#contenido">
+      Saltar al contenido
+    </a>
     <slot />
   </body>
 </html>

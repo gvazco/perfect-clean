@@ -1,5 +1,5 @@
 export function GET() {
-  const site = 'https://perfectclean.mx';
+  const site = 'https://perfect-clean.gbvazco.net';
   const pages = ['/', '/#servicios', '/#planes', '/#proceso', '/#contacto'];
   const body = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
