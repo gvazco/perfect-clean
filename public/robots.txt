@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://perfectclean.mx/sitemap.xml
+Sitemap: https://perfect-clean.gbvazco.net/sitemap.xml
